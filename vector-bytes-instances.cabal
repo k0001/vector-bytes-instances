@@ -21,8 +21,8 @@ library
   ghc-options: -Wall -O2
   exposed-modules: Data.Vector.Serial
   build-depends:
-    base > 3 && < 4.10,
-    vector >= 0.6 && < 0.12,
+    base > 3 && < 4.11,
+    vector >= 0.6 && < 0.13,
     bytes >= 0.13 && < 0.16
 
 test-suite tests
