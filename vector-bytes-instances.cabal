@@ -1,5 +1,5 @@
 name: vector-bytes-instances
-version: 0.1
+version: 0.1.1
 synopsis: Serial (from the bytes package) for Vector (from the vector package)
 description:
   Serial (from the bytes package) for Vector (from the vector package)
@@ -10,8 +10,10 @@ homepage: https://github.com/k0001/vector-bytes-instances
 bug-reports: https://github.com/k0001/vector-bytes-instances/issues
 license: BSD3
 license-file: LICENSE
+extra-source-files: CHANGELOG.md
 author: Renzo Carbonara
-maintainer: renzocarbonara¡gmail!com
+copyright: Renzo Carbonara 2017-2018
+maintainer: ren¡ren!zone
 stability: Experimental
 category: Data
 build-type: Simple
@@ -19,15 +21,17 @@ cabal-version: >=1.8
 
 library
   ghc-options: -Wall -O2
+  hs-source-dirs: lib
   exposed-modules: Data.Vector.Serial
   build-depends:
-    base > 3 && < 4.11,
-    vector >= 0.6 && < 0.13,
-    bytes >= 0.13 && < 0.16
+    base > 3 && < 5,
+    vector >= 0.6,
+    bytes >= 0.13
 
 test-suite tests
   type: exitcode-stdio-1.0
-  main-is: test/Main.hs
+  hs-source-dirs: test
+  main-is: Main.hs
   build-depends:
       base
     , vector-bytes-instances
